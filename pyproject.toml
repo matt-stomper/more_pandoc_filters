@@ -1,0 +1,26 @@
+[project]
+name = "more_pandoc_filters"
+version = "0.2.0"
+requires-python = ">=3.12"
+
+dependencies = [
+    "panflute==2.3.1",
+    "pyyaml>=6.0.3",
+]
+
+[tool.coverage.run]
+omit = [
+    "tests/*",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.0.0",
+    "pytest-cov>=7.1.0",
+]
+
+[project.scripts]
+landscape-section-filter = "more_pandoc_filters.landscape_section_filter:main"
+level-1-heading-page-break = "more_pandoc_filters.level_1_heading_page_break:main"
+bibliography-table-filter = "more_pandoc_filters.bibliography_table:main"
+revision-table-filter = "more_pandoc_filters.revisions_table:main"
