@@ -1,0 +1,25 @@
+[project]
+name = "more_pandoc_filters"
+version = "0.1.0"
+requires-python = ">=3.12"
+
+dependencies = [
+    "panflute==2.3.1"
+]
+
+[tool.coverage.run]
+omit = [
+    "tests/*",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.0.0"
+]
+test = [
+    "pytest-cov"
+]
+
+[project.scripts]
+landscape-section-filter = "more_pandoc_filters.landscape_section_filter:main"
+level-1-heading-page-break = "more_pandoc_filters.level_1_heading_page_break:main"
