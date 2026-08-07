@@ -1,0 +1,5 @@
+/dist/
+/.venv/
+/.coverage
+/more_pandoc_filters.egg-info/
+/.idea
